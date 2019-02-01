@@ -21,10 +21,13 @@ const FormField = ({
     />
     {touched && (
       <div>
-        <i className="fas fa-exclamation-triangle text-danger"></i>
-        &nbsp;
-        {(error && (<span>{error}</span>)) ||
-          (warning && (<span>{warning}</span>))}
+        {error && (
+          <React.Fragment>
+            <i className="fas fa-exclamation-triangle text-danger"></i>
+            &nbsp;
+            <span>{error}</span>
+          </React.Fragment>
+        )}
       </div>
     )}
   </div>
